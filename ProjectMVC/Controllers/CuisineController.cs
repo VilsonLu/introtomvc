@@ -14,7 +14,7 @@ namespace ProjectMVC.Controllers
         // Any public method that you will add here, they can invoke it through URL
         // ASP.NET will try to look for every possible location to fill up the method (query string, URL configuration, posted)
 
-        [Log]
+        [ActionName("Find")]
         public ActionResult Search(string name)
         {
             return Content(name);

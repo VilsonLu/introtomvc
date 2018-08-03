@@ -17,7 +17,7 @@ namespace ProjectMVC
             routes.MapRoute(
                 name: "Cuisine",
                 url: "cuisine/{name}",
-                defaults: new {controller = "Cuisine", action = "Search", name = ""});
+                defaults: new {controller = "Cuisine", action = "Find", name = ""});
 
             routes.MapRoute(
                 name: "Default",
