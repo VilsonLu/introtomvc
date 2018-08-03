@@ -12,9 +12,10 @@ namespace ProjectMVC.Controllers
 
         RestaurantDb _db = new RestaurantDb();
 
-        public ActionResult Index()
+        public ActionResult Index(string searchTerm = null)
         {
-            var model = _db.Restaurants.ToList();
+            var model = _db.Restaurants.OrderByDescending(r => r.Reviews.Average(x => x.Rating))
+                .Where(s => searchTerm == null || s.Name.StartsWith(searchTerm));
             return View(model);
         }
 
