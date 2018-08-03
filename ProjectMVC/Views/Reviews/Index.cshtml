@@ -6,7 +6,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", new { restaurantId = Model.Id })
 </p>
 
-@Html.Partial("_Reviews",  Model.Reviews)
+@Html.Partial("_Reviews", Model.Reviews)
